@@ -1,0 +1,28 @@
+<!DOCTYPE html>{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Грузовые автомобили</title>
+    <link rel="stylesheet" href={% static 'css/styles.css' %} type="text/css"/>
+  </head>
+  <body>
+  <table>
+        <tr id = 'title'>
+          <td>Бортовой<br>номер</td>
+          <td>Модель</td>
+          <td>Максимальная<br>грузоподъемность,<br>тонн</td>
+          <td>Текущий<br>вес</td>
+          <td>Перегруз.<br>%</td>
+        </tr>
+       {% for DumpTruck in cars  %}
+        <tr>
+          <td>{{ DumpTruck.number }}</td>
+          <td>{{ DumpTruck.track_model }}</td>
+          <td>{{ DumpTruck.track_model.max_load }}</td>
+          <td>{{ DumpTruck.current_weight }}</td>
+          <td>{{ DumpTruck.overload }}</td>
+        </tr>
+       {% endfor %}
+    </table>
+  </body>
+</html>

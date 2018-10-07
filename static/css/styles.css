@@ -1,0 +1,20 @@
+table {
+margin:auto;
+background: LightBlue;
+border-collapse: collapse;
+border: 3px solid black;
+text-align: center;
+font-family: Arial;
+font-size: 17px;
+}
+
+td {
+padding: 5px;
+width: 170px;
+border-left: 1px solid black;
+}
+
+#title{
+border-bottom: 1px solid black;
+font-size: 17px;
+}
