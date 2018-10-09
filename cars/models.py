@@ -5,7 +5,7 @@ class  DumpTruckModel(models.Model):
     max_load = models.IntegerField('Максимальная грузоподъемность')
 
     class Meta:
-        verbose_name = 'Характеристики новой моделели самосвала'
+        verbose_name = 'Характеристики модели самосвала'
         verbose_name_plural = 'Характеристики моделелей самосвалов'
 
     def __str__(self):
