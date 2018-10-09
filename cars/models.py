@@ -1,7 +1,7 @@
 from django.db import models
 
 class  DumpTruckModel(models.Model):
-    model = models.CharField('Модель', max_length=20)
+    model = models.CharField('Модель самосвала', max_length=20)
     max_load = models.IntegerField('Максимальная грузоподъемность')
 
     class Meta:
@@ -14,7 +14,7 @@ class  DumpTruckModel(models.Model):
 
 class  DumpTruck(models.Model):
     number = models.CharField('Бортовой номер', max_length=20)
-    track_model = models.ForeignKey(DumpTruckModel, on_delete=models.CASCADE, default=0)
+    track_model = models.ForeignKey(DumpTruckModel, on_delete=models.CASCADE, default=0, verbose_name="Модель самосвала")
     current_weight = models.PositiveSmallIntegerField('Текущий вес', default=0)
 
     class Meta:
